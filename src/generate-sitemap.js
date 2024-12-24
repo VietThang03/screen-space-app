@@ -3,6 +3,14 @@ import { writeFile } from 'fs/promises';
 // Cấu hình các URL trong ứng dụng
 const urls = [
   { loc: '/', changefreq: 'daily', priority: 1.0 },
+  { loc: '/white-screen', changefreq: 'daily', priority: 0.8 },
+  { loc: '/blue-screen', changefreq: 'daily', priority: 0.8 },
+  { loc: '/green-screen', changefreq: 'daily', priority: 0.8 },
+  { loc: '/red-screen', changefreq: 'daily', priority: 0.8 },
+  { loc: '/yellow-screen', changefreq: 'daily', priority: 0.8 },
+  { loc: '/orange-screen', changefreq: 'daily', priority: 0.8 },
+  { loc: '/pink-screen', changefreq: 'daily', priority: 0.8 },
+  { loc: '/purple-screen', changefreq: 'daily', priority: 0.8 },
   { loc: '/about', changefreq: 'daily', priority: 0.8 },
   { loc: '/privacy-policy', changefreq: 'daily', priority: 0.8 },
   { loc: '/term-and-condition', changefreq: 'daily', priority: 0.8 },

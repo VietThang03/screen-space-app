@@ -23,10 +23,7 @@ const HeaderApp = () => {
               className="hover:text-black transition"
             >
               Terms and Conditions
-            </Link>
-            <Link to="/cms" className="hover:text-black transition">
-              CMS
-            </Link>       
+            </Link>  
           </nav>
         </div>
 
@@ -44,10 +41,7 @@ const HeaderApp = () => {
               className="hover:text-black transition"
             >
               Terms and Conditions
-            </Link>
-            <Link to="/cms" className="hover:text-black transition">
-              CMS
-            </Link>        
+            </Link>     
           </nav>
         </div>
       </header>

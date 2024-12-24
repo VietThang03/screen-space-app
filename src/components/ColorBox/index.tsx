@@ -2,7 +2,7 @@ interface Props {
   color: string;
   name: string;
   activeColor: boolean;
-  handleColorChange: () => void;
+  handleColorChange?: () => void;
 }
 
 const ColorBox = ({ color, name, activeColor, handleColorChange }: Props) => {

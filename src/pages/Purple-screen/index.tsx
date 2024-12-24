@@ -5,24 +5,23 @@ import ScreenDisplay from "../../components/ScreenDisplay";
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const HomePage = () => {
+const PurpleScreenPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const canonicalUrl = `http://localhost:5173${location.pathname}`;
   
-  const [activeColor, setActiveColor] = useState(colors[0]); // Trạng thái màu hiện tại
+  const [activeColor, setActiveColor] = useState(colors[8]); // Trạng thái màu hiện tại
   const handleColorChange = (color: { name: string; color: string; path?: string }) => {
     setActiveColor(color);
     navigate(color.path!);
   };
-
   return (
     <>
       <Helmet>
         <title>{activeColor ? activeColor.name : "Home"}</title>
         <meta
           name="home"
-          content="Đây là trang chủ của ứng dụng Screen Space App. Tìm hiểu thêm thông tin tại đây!"
+          content="Đây là trang purple screen của ứng dụng Screen Space App. Tìm hiểu thêm thông tin tại đây!"
         />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
@@ -43,7 +42,7 @@ const HomePage = () => {
         {/* Header */}
         <div className="max-w-3xl">
           <h1 className="text-2xl font-bold text-center mb-6">
-            Welcome to Screen Space App
+            Welcome to Purple screen
           </h1>
           <p className="text-gray-600 text-center leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
@@ -148,4 +147,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default PurpleScreenPage;
