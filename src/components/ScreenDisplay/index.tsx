@@ -1,17 +1,17 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { TypeColorCard } from "../../utils/ArrayColor";
 
 interface Resolution {
-    label: string
-    width: number
-    height: number
+  label: string;
+  width: number;
+  height: number;
 }
 
-interface Props{
-    activeColor: TypeColorCard
+interface Props {
+  activeColor: TypeColorCard;
 }
 
-const ScreenDisplay = ({activeColor}: Props) => {
+const ScreenDisplay = ({ activeColor }: Props) => {
   const resolutions: Resolution[] = [
     { label: "480p", width: 854, height: 480 },
     { label: "720p", width: 1280, height: 720 },
@@ -22,40 +22,71 @@ const ScreenDisplay = ({activeColor}: Props) => {
   ];
 
   // Trạng thái để theo dõi độ phân giải được chọn
-  const [selectedResolution, setSelectedResolution] = useState<Resolution>(resolutions[2]);
+  const [selectedResolution, setSelectedResolution] = useState<Resolution>(
+    resolutions[2]
+  );
   const screenRef = useRef<HTMLDivElement>(null); // Tham chiếu đến phần tử màu
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   // Xử lý khi thay đổi độ phân giải
-  const handleResolutionChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleResolutionChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
     const selected = resolutions.find(
       (res) => res.label === event.target.value
     );
     setSelectedResolution(selected!);
   };
 
-   // Hàm xử lý fullscreen
-   const handleFullscreen = () => {
+  // Hàm xử lý fullscreen
+  const handleFullscreen = () => {
     if (screenRef.current) {
       if (document.fullscreenElement) {
         document.exitFullscreen(); // Thoát fullscreen nếu đang ở chế độ fullscreen
+        setIsFullscreen(false);
       } else {
         screenRef.current.requestFullscreen(); // Kích hoạt fullscreen
+        setIsFullscreen(true);
       }
     }
   };
 
+   // Lắng nghe sự kiện fullscreenchange
+   useEffect(() => {
+    const handleFullscreenChange = () => {
+      if (!document.fullscreenElement) {
+        setIsFullscreen(false); // Thoát fullscreen
+      } else {
+        setIsFullscreen(true); // Kích hoạt fullscreen
+      }
+    };
+
+    // Thêm sự kiện lắng nghe
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+
+    // Dọn dẹp sự kiện khi component unmount
+    return () => {
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+    };
+  }, []);
+
   return (
     <div className="flex flex-col items-center bg-white py-8">
       {/* Ô màu (Screen Box) */}
-      <div ref={screenRef} className={`relative w-full max-w-2xl h-60 ${activeColor.color} rounded-xl shadow-lg`}>
+      <div
+        ref={screenRef}
+        className={`relative w-full max-w-2xl h-60 ${activeColor.color} rounded-xl shadow-lg`}
+      >
         {/* Nút Fullscreen ở góc */}
-        <button
-          className="absolute bottom-4 right-4 w-6 h-6 flex items-center justify-center bg-gray-800 text-white rounded-full hover:bg-gray-700 transition"
-          aria-label="Fullscreen"
-          onClick={handleFullscreen}
-        >
-          ↔
-        </button>
+        {!isFullscreen && (
+          <button
+            className="absolute bottom-4 right-4 w-6 h-6 flex items-center justify-center bg-gray-800 text-white rounded-full hover:bg-gray-700 transition"
+            aria-label="Fullscreen"
+            onClick={handleFullscreen}
+          >
+            ↔
+          </button>
+        )}
       </div>
 
       {/* Tên màn hình */}
@@ -65,7 +96,7 @@ const ScreenDisplay = ({activeColor}: Props) => {
       <div className="mt-4 flex flex-col sm:flex-row items-center sm:space-x-4">
         {/* Dropdown chọn độ phân giải */}
         <div className="relative inline-block">
-        <select
+          <select
             className="block w-full text-sm px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={selectedResolution.label}
             onChange={handleResolutionChange}

@@ -24,6 +24,12 @@ const HeaderApp = () => {
             >
               Terms and Conditions
             </Link>  
+            {/* <Link
+              to="/cms-blog"
+              className="hover:text-black transition"
+            >
+              Blog
+            </Link>   */}
           </nav>
         </div>
 

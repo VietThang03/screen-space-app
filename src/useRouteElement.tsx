@@ -12,6 +12,7 @@ import YellowScreenPage from "./pages/Yellow-screen";
 import OrangeScreenPage from "./pages/Orange-screen";
 import PinkScreenPage from "./pages/Pink-screen";
 import PurpleScreenPage from "./pages/Purple-screen";
+import BlogPage from "./pages/Blog";
 
 export default function useRouteElement() {
   const routeElements = useRoutes([
@@ -48,6 +49,14 @@ export default function useRouteElement() {
         </MainLayout>
       ),
     },
+    // {
+    //   path: "/cms-blog",
+    //   element: (
+    //     <MainLayout>
+    //       <BlogPage />
+    //     </MainLayout>
+    //   ),
+    // },
     {
       path: "/white-screen",
       element: (

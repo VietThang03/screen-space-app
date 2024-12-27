@@ -8,12 +8,13 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-     "build:sitemap": "node src/generate-sitemap.js"
+    "build:sitemap": "node src/generate-sitemap.js"
   },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet-async": "^2.0.5",
+    "react-quill": "^2.0.0",
     "react-router-dom": "^7.1.0",
     "react-toastify": "^11.0.2",
     "sitemap": "^8.0.0"
