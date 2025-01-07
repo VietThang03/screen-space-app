@@ -3,15 +3,19 @@ import { colors } from "../../utils/ArrayColor";
 import ColorBox from "../../components/ColorBox";
 import ScreenDisplay from "../../components/ScreenDisplay";
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const OrangeScreenPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const canonicalUrl = `http://localhost:5173${location.pathname}`;
-  
+  const canonicalUrl = `https://blackscreen.info${location.pathname}`;
+
   const [activeColor, setActiveColor] = useState(colors[6]); // Trạng thái màu hiện tại
-  const handleColorChange = (color: { name: string; color: string; path?: string }) => {
+  const handleColorChange = (color: {
+    name: string;
+    color: string;
+    path?: string;
+  }) => {
     setActiveColor(color);
     navigate(color.path!);
   };
@@ -42,12 +46,19 @@ const OrangeScreenPage = () => {
         {/* Header */}
         <div className="max-w-3xl">
           <h1 className="text-2xl font-bold text-center mb-6">
-            Welcome to Orange screen
+            Bold and Bright Orange Screen
           </h1>
           <p className="text-gray-600 text-center leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
-            eros nec lectus scelerisque tempus nec non odio. Mauris eu risus vel
-            lacus tincidunt ultricies.
+            Welcome to{" "}
+            <Link to={"https://blackscreen.info/"} className="font-bold">
+              blackscreen.info
+            </Link>{" "}
+            , where the warmth and vibrancy of orange take center stage. Known
+            for its balance between energy and comfort, the orange screen is a
+            versatile tool for enhancing visuals, testing lighting, and creating
+            unique creative projects. Whether you’re aiming for bold artistic
+            effects or a cozy ambiance, the orange screen offers countless
+            possibilities to bring your ideas to life.
           </p>
         </div>
 
@@ -55,90 +66,88 @@ const OrangeScreenPage = () => {
         <div className="max-w-3xl bg-white rounded-lg shadow-lg p-6 mt-8">
           {/* Section 1 */}
           <h2 className="text-xl font-semibold mb-4">
-            The Versatility of the Black Screen
+            1. The Dynamic Power of the Orange Screen
           </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              1.1 Darken Without Powering Down
+              1.1 Warm and Inviting Visuals
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              tincidunt, magna ac interdum lacinia, odio justo pharetra elit,
-              vitae pulvinar risus lorem eu nisi.
+              An orange screen adds a sense of warmth, energy, and friendliness
+              to your visuals. Its vibrant yet approachable tone makes it
+              perfect for themes that evoke optimism, enthusiasm, or creativity.
+              From casual projects to professional campaigns, the orange screen
+              creates a dynamic and welcoming aesthetic.
             </p>
           </div>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              1.2 Power Saving and Environmental Impact
+              1.2 Perfect for Balance and Harmony
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Vestibulum sit amet metus eget risus malesuada dapibus a eget
-              odio. Integer fermentum, neque vitae venenatis cursus, eros justo
-              pretium ex, eget luctus ligula lorem sit amet ex.
+              Orange is a color that bridges the gap between bold and subtle,
+              making it a fantastic choice for striking the right balance in
+              your designs. The orange screen provides an ideal backdrop for
+              projects that require both vibrancy and harmony, ensuring your
+              subjects stand out without overwhelming the viewer.
             </p>
           </div>
 
           {/* Section 2 */}
           <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
+            2. Practical Applications of the Orange Screen
           </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
+              2.1 Marketing and Branding Projects
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
+              Orange is often associated with innovation and energy, making it a
+              popular choice for branding and marketing campaigns. The orange
+              screen can help create visuals that capture attention, build
+              excitement, and connect with your audience in a memorable way.
             </p>
           </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
-            </p>
-          </div>
-          {/* Section 3 */}
-          <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
-          </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
+              2.2 Artistic Photography and Videography
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
+              For photographers and videographers, the orange screen offers a
+              unique and creative canvas. Whether you’re capturing product
+              shots, portraits, or cinematic scenes, its warm tones add depth
+              and personality to your visuals, making them truly stand out.
             </p>
           </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
-            </p>
-          </div>
-          {/* Section 4 */}
-          <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
-          </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
+              2.3 Lighting and Color Experiments
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
+              The orange screen is an excellent tool for experimenting with
+              light and color combinations. It works well for testing how
+              different shades interact, especially when blending warm and cool
+              tones. It also enhances the interplay of shadows and highlights,
+              making it a favorite among designers and visual artists.
             </p>
           </div>
           <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
+            <h3 className="text-lg font-medium">
+              Ignite Your Creativity with{" "}
+              <Link to={"https://blackscreen.info/"} className="font-bold">
+                blackscreen.info
+              </Link>{" "}
+            </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
+              Step into a world of warmth and inspiration with{" "}
+              <Link to={"https://blackscreen.info/"} className="font-bold">
+                blackscreen.info
+              </Link>{" "}
+              . Whether you’re designing compelling campaigns, exploring
+              artistic concepts, or crafting visuals with a welcoming vibe, the
+              orange screen is your ultimate partner. Let its vibrant energy
+              fuel your creativity and transform your projects into
+              masterpieces!
             </p>
           </div>
         </div>

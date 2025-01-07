@@ -3,17 +3,21 @@ import { colors } from "../../utils/ArrayColor";
 import ColorBox from "../../components/ColorBox";
 import ScreenDisplay from "../../components/ScreenDisplay";
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const WhiteScreenPage = () => {
-   const navigate = useNavigate();
+  const navigate = useNavigate();
   const location = useLocation();
-  const canonicalUrl = `http://localhost:5173${location.pathname}`;
-  
+  const canonicalUrl = `https://blackscreen.info${location.pathname}`;
+
   const [activeColor, setActiveColor] = useState(colors[1]); // Trạng thái màu hiện tại
-  const handleColorChange = (color: { name: string; color: string; path?: string }) => {
+  const handleColorChange = (color: {
+    name: string;
+    color: string;
+    path?: string;
+  }) => {
     setActiveColor(color);
-    navigate(color.path!)
+    navigate(color.path!);
   };
   return (
     <>
@@ -42,12 +46,23 @@ const WhiteScreenPage = () => {
         {/* Header */}
         <div className="max-w-3xl">
           <h1 className="text-2xl font-bold text-center mb-6">
-            Welcome to White screen app
+            The Beauty of the White Screen
           </h1>
           <p className="text-gray-600 text-center leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
-            eros nec lectus scelerisque tempus nec non odio. Mauris eu risus vel
-            lacus tincidunt ultricies.
+            Welcome to{" "}
+            <Link to={"https://blackscreen.info/"} className="font-bold">
+              blackscreen.info
+            </Link>
+            , where the simplicity and brilliance of the white screen take
+            center stage. We believe that clarity and minimalism are essential
+            for creating impactful visual experiences. Our platform is dedicated
+            to providing versatile functionalities that revolve around the
+            concept of the white screen. From optimizing lighting to enhancing
+            creativity,{" "}
+            <Link to={"https://blackscreen.info/"} className="font-bold">
+              blackscreen.info
+            </Link>{" "}
+            offers a comprehensive solution for your digital needs
           </p>
         </div>
 
@@ -55,90 +70,62 @@ const WhiteScreenPage = () => {
         <div className="max-w-3xl bg-white rounded-lg shadow-lg p-6 mt-8">
           {/* Section 1 */}
           <h2 className="text-xl font-semibold mb-4">
-            The Versatility of the Black Screen
+            1. Unlocking the Potential of the White Screen
           </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              1.1 Darken Without Powering Down
+              1.1 Pure, Clear, and Versatile Visuals
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              tincidunt, magna ac interdum lacinia, odio justo pharetra elit,
-              vitae pulvinar risus lorem eu nisi.
+              The white screen provides a pristine and clean canvas, ensuring
+              your visuals stand out with maximum clarity. Whether you're
+              editing photos, designing graphics, or just seeking a pure
+              backdrop, the white screen serves as an ideal foundation for
+              precision and creativity.
             </p>
           </div>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              1.2 Power Saving and Environmental Impact
+              1.2 Perfect Lighting for Your Projects
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Vestibulum sit amet metus eget risus malesuada dapibus a eget
-              odio. Integer fermentum, neque vitae venenatis cursus, eros justo
-              pretium ex, eget luctus ligula lorem sit amet ex.
+              With its neutral brightness, the white screen ensures optimal
+              lighting conditions. Whether you're capturing stunning portraits,
+              using it as a light source, or setting up a photography studio,
+              the screen offers balanced illumination, enabling enhanced visual
+              compositions.
             </p>
           </div>
 
           {/* Section 2 */}
           <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
+            2. Practical Applications of the White Screen
           </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
+              2.1 Testing Touch Interfaces and Identifying Dead Spots
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
+              The white screen is a valuable tool for testing device touch
+              screens, allowing you to identify dead zones with ease. Its
+              consistent background makes spotting touch irregularities
+              effortless and accurate.
             </p>
           </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
-            </p>
-          </div>
-          {/* Section 3 */}
-          <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
-          </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
+              2.2 Multipurpose Backdrop for Creativity
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
-            </p>
-          </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
-            </p>
-          </div>
-          {/* Section 4 */}
-          <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
-          </h2>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
-            </h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
-            </p>
-          </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
+              Use the white screen as a flexible tool for various creative
+              tasks. From being a background for product photography to acting
+              as a clean slate for brainstorming sessions, it provides unmatched
+              versatility for your needs. Join us at{" "}
+              <Link to={"https://blackscreen.info/"} className="font-bold">
+                blackscreen.info
+              </Link>{" "}
+              and explore the endless possibilities that a white screen can
+              bring to your creative and professional endeavors!
             </p>
           </div>
         </div>

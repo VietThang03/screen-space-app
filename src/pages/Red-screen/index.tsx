@@ -3,15 +3,19 @@ import { colors } from "../../utils/ArrayColor";
 import ColorBox from "../../components/ColorBox";
 import ScreenDisplay from "../../components/ScreenDisplay";
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const RedScreenPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const canonicalUrl = `http://localhost:5173${location.pathname}`;
-  
+  const canonicalUrl = `https://blackscreen.info${location.pathname}`;
+
   const [activeColor, setActiveColor] = useState(colors[4]); // Trạng thái màu hiện tại
-  const handleColorChange = (color: { name: string; color: string; path?: string }) => {
+  const handleColorChange = (color: {
+    name: string;
+    color: string;
+    path?: string;
+  }) => {
     setActiveColor(color);
     navigate(color.path!);
   };
@@ -42,12 +46,20 @@ const RedScreenPage = () => {
         {/* Header */}
         <div className="max-w-3xl">
           <h1 className="text-2xl font-bold text-center mb-6">
-            Welcome to Red screen app
+            The Energy of the Red Screen
           </h1>
           <p className="text-gray-600 text-center leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
-            eros nec lectus scelerisque tempus nec non odio. Mauris eu risus vel
-            lacus tincidunt ultricies.
+            Welcome to{" "}
+            <Link to={"https://blackscreen.info/"} className="font-bold">
+              blackscreen.info
+            </Link>{" "}
+            , where the bold and striking nature of the red screen takes the
+            spotlight. Known for its vibrancy and versatility, the red screen is
+            a powerful tool for creative professionals and enthusiasts looking
+            to make a statement. From dynamic visual effects to unique lighting
+            tests, the red screen offers distinctive advantages across various
+            applications. Let’s explore how a red screen can transform your
+            creative projects.
           </p>
         </div>
 
@@ -55,90 +67,79 @@ const RedScreenPage = () => {
         <div className="max-w-3xl bg-white rounded-lg shadow-lg p-6 mt-8">
           {/* Section 1 */}
           <h2 className="text-xl font-semibold mb-4">
-            The Versatility of the Black Screen
+            1. The Power of the Red Screen
           </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              1.1 Darken Without Powering Down
+              1.1 Bold and Eye-Catching Visuals
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              tincidunt, magna ac interdum lacinia, odio justo pharetra elit,
-              vitae pulvinar risus lorem eu nisi.
+              A red screen creates a striking background that commands
+              attention. Its vivid hue makes it ideal for emphasizing subjects,
+              creating dramatic contrasts, or experimenting with bold artistic
+              expressions. Whether you're crafting promotional materials or
+              experimenting with edgy designs, the red screen adds undeniable
+              impact.
             </p>
           </div>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              1.2 Power Saving and Environmental Impact
+              1.2 Unique Lighting and Color Effects
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Vestibulum sit amet metus eget risus malesuada dapibus a eget
-              odio. Integer fermentum, neque vitae venenatis cursus, eros justo
-              pretium ex, eget luctus ligula lorem sit amet ex.
+              The rich tones of a red screen can influence the mood and
+              atmosphere of your visuals, making it perfect for projects that
+              require warmth, passion, or intensity. It also provides a unique
+              way to test lighting setups and explore creative color grading
+              techniques.
             </p>
           </div>
 
           {/* Section 2 */}
           <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
+            2. Practical Applications of the Red Screen
           </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
+              2.1 Creative Photography and Cinematic Effects
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
+              The red screen is a fantastic choice for artistic photography or
+              film projects that require an unconventional and eye-catching
+              backdrop. It can be used to enhance themes of energy, urgency, or
+              power, providing a visually arresting canvas for your subjects.
             </p>
           </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
-            </p>
-          </div>
-          {/* Section 3 */}
-          <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
-          </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
+              2.2 Experimental Visual Testing
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
+              For designers and visual artists, the red screen serves as an
+              excellent tool for experimenting with contrasting elements,
+              shadows, and highlights. Its bold color makes it particularly
+              useful for testing how other hues interact with bright, saturated
+              tones.
             </p>
           </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
-            </p>
-          </div>
-          {/* Section 4 */}
-          <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
-          </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
+              2.3 Branding and Marketing Campaigns
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
-            </p>
-          </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
+              Red is a color often associated with excitement and passion,
+              making the red screen an effective tool for branding and
+              promotional campaigns. Whether you're designing ads, creating
+              logos, or shooting commercials, the red screen can help evoke
+              strong emotions and leave a lasting impression. Explore the bold
+              possibilities with{" "}
+              <Link to={"https://blackscreen.info/"} className="font-bold">
+                blackscreen.info
+              </Link>{" "}
+              . Whether you're creating high-energy visuals, testing new ideas,
+              or pushing the boundaries of your artistic vision, the red screen
+              provides a unique and powerful platform for innovation. Let the
+              intensity of red inspire your next big project!
             </p>
           </div>
         </div>

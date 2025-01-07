@@ -3,15 +3,19 @@ import { colors } from "../../utils/ArrayColor";
 import ColorBox from "../../components/ColorBox";
 import ScreenDisplay from "../../components/ScreenDisplay";
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const canonicalUrl = `http://localhost:5173${location.pathname}`;
-  
+  const canonicalUrl = `https://blackscreen.info${location.pathname}`;
+
   const [activeColor, setActiveColor] = useState(colors[0]); // Trạng thái màu hiện tại
-  const handleColorChange = (color: { name: string; color: string; path?: string }) => {
+  const handleColorChange = (color: {
+    name: string;
+    color: string;
+    path?: string;
+  }) => {
     setActiveColor(color);
     navigate(color.path!);
   };
@@ -26,7 +30,7 @@ const HomePage = () => {
         />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
-      <div className="flex flex-wrap justify-center gap-4 p-4">
+      <div className="flex flex-wrap justify-center gap-4 p-4 cursor-pointer">
         {colors.map((colorObj, index) => (
           <ColorBox
             key={index}
@@ -43,12 +47,23 @@ const HomePage = () => {
         {/* Header */}
         <div className="max-w-3xl">
           <h1 className="text-2xl font-bold text-center mb-6">
-            Welcome to Screen Space App
+            The Power of the Black Screen
           </h1>
           <p className="text-gray-600 text-center leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
-            eros nec lectus scelerisque tempus nec non odio. Mauris eu risus vel
-            lacus tincidunt ultricies.
+            Welcome to{" "}
+            <Link to={"https://blackscreen.info/"} className="font-bold">
+              blackscreen.info
+            </Link>{" "}
+            , where the elegance and depth of the black screen take center
+            stage. We believe that the simplicity and sophistication of a black
+            screen open the door to countless creative possibilities. Our
+            platform is designed to showcase the versatility of black screens,
+            from enhancing focus to creating captivating visual effects.{" "}
+            <Link to={"https://blackscreen.info/"} className="font-bold">
+              blackscreen.info
+            </Link>{" "}
+            is your go-to destination for optimizing your digital experience
+            with the power of darkness.
           </p>
         </div>
 
@@ -56,92 +71,64 @@ const HomePage = () => {
         <div className="max-w-3xl bg-white rounded-lg shadow-lg p-6 mt-8">
           {/* Section 1 */}
           <h2 className="text-xl font-semibold mb-4">
-            The Versatility of the Black Screen
+            1. Unlocking the Potential of the Black Screen
           </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              1.1 Darken Without Powering Down
+              1.1 Deep Contrast and Visual Focus
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              tincidunt, magna ac interdum lacinia, odio justo pharetra elit,
-              vitae pulvinar risus lorem eu nisi.
+              A black screen provides unmatched contrast, making it ideal for
+              highlighting bright visuals and focusing on key elements. Whether
+              you're testing graphics, watching media, or displaying content,
+              the black screen ensures that every detail pops with clarity and
+              vibrance.
             </p>
           </div>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              1.2 Power Saving and Environmental Impact
+              1.2 Reducing Eye Strain and Maximizing Comfort
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Vestibulum sit amet metus eget risus malesuada dapibus a eget
-              odio. Integer fermentum, neque vitae venenatis cursus, eros justo
-              pretium ex, eget luctus ligula lorem sit amet ex.
+              he dark background of a black screen is gentle on the eyes,
+              especially in low-light environments. It minimizes glare and
+              reduces eye fatigue, making it perfect for extended use during
+              presentations, design work, or casual browsing.
             </p>
           </div>
 
           {/* Section 2 */}
           <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
+            2. Practical Applications of the Black Screen
           </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
+              2.1 Background for Photography and Visual Design
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
+              The black screen serves as a seamless backdrop for photography,
+              eliminating distractions and enhancing the subject. It's also a
+              favorite for graphic designers who need a neutral space for
+              experimenting with light and colors.
             </p>
           </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
-            </p>
-          </div>
-          {/* Section 3 */}
-          <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
-          </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
+              2.2 Testing Display Quality and Pixel Accuracy
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
+              The black screen is ideal for testing the quality of monitors,
+              TVs, and smartphones. It helps identify dead pixels and uneven
+              lighting, ensuring your device delivers the best performance
+              possible. Join us at{" "}
+              <Link to={"https://blackscreen.info/"} className="font-bold">
+                blackscreen.info
+              </Link>{" "}
+              to experience the versatility and power of the black screen in
+              transforming your creative and professional projects. Let the
+              depth of darkness inspire your next big idea!
             </p>
-          </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
-            </p>
-          </div>
-          {/* Section 4 */}
-          <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
-          </h2>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
-            </h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
-            </p>
-          </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
-            </p>
-          </div>
+          </div>       
         </div>
       </div>
     </>

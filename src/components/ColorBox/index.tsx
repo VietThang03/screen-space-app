@@ -11,7 +11,8 @@ const ColorBox = ({ color, name, activeColor, handleColorChange }: Props) => {
       <div
         className={`w-32 h-20 border border-gray-300 rounded-lg shadow  ${
           activeColor ? "ring-4 ring-blue-500" : ""
-        } ${color}`}
+        }`}
+        style={{backgroundColor: `${color}`}}
         onClick={handleColorChange}
       ></div>
       <p className="text-sm font-medium text-center">{name}</p>

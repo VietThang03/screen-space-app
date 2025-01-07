@@ -3,15 +3,19 @@ import { colors } from "../../utils/ArrayColor";
 import ColorBox from "../../components/ColorBox";
 import ScreenDisplay from "../../components/ScreenDisplay";
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const BlueScreenPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const canonicalUrl = `http://localhost:5173${location.pathname}`;
-  
+  const canonicalUrl = `https://blackscreen.info${location.pathname}`;
+
   const [activeColor, setActiveColor] = useState(colors[2]); // Trạng thái màu hiện tại
-  const handleColorChange = (color: { name: string; color: string; path?: string }) => {
+  const handleColorChange = (color: {
+    name: string;
+    color: string;
+    path?: string;
+  }) => {
     setActiveColor(color);
     navigate(color.path!);
   };
@@ -42,12 +46,20 @@ const BlueScreenPage = () => {
         {/* Header */}
         <div className="max-w-3xl">
           <h1 className="text-2xl font-bold text-center mb-6">
-            Welcome to Blue screen app
+            The Calm of the Blue Screen
           </h1>
           <p className="text-gray-600 text-center leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
-            eros nec lectus scelerisque tempus nec non odio. Mauris eu risus vel
-            lacus tincidunt ultricies.
+            Welcome to{" "}
+            <Link to={"https://blackscreen.info/"} className="font-bold">
+              blackscreen.info
+            </Link>{" "}
+            , where the calmness and versatility of the blue screen take the
+            spotlight. The blue screen is more than just a backdrop—it's a
+            creative tool used across industries for its unique properties.
+            Whether for video editing, visual effects, or enhancing your digital
+            workspace, a blue screen offers endless possibilities. Join us as we
+            uncover the benefits of integrating a blue screen into your
+            projects.
           </p>
         </div>
 
@@ -55,90 +67,63 @@ const BlueScreenPage = () => {
         <div className="max-w-3xl bg-white rounded-lg shadow-lg p-6 mt-8">
           {/* Section 1 */}
           <h2 className="text-xl font-semibold mb-4">
-            The Versatility of the Black Screen
+            1. Unlocking the Potential of the Blue Screen
           </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              1.1 Darken Without Powering Down
+              1.1 A Foundation for Creative Editing
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              tincidunt, magna ac interdum lacinia, odio justo pharetra elit,
-              vitae pulvinar risus lorem eu nisi.
+              The blue screen is widely recognized for its role in chroma key
+              compositing, a technique used to superimpose subjects onto
+              different backgrounds. From blockbuster movies to home video
+              projects, the blue screen provides a stable, clean, and adaptable
+              canvas for seamless editing.
             </p>
           </div>
           <div className="mb-6">
-            <h3 className="text-lg font-medium">
-              1.2 Power Saving and Environmental Impact
-            </h3>
+            <h3 className="text-lg font-medium">1.2 Gentle Visual Comfort</h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Vestibulum sit amet metus eget risus malesuada dapibus a eget
-              odio. Integer fermentum, neque vitae venenatis cursus, eros justo
-              pretium ex, eget luctus ligula lorem sit amet ex.
+              The soft hue of the blue screen is easy on the eyes, making it an
+              excellent choice for extended use. Its calming tone reduces visual
+              fatigue, creating an ideal environment for tasks that require
+              focus and concentration.
             </p>
           </div>
 
           {/* Section 2 */}
           <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
+            2. Practical Applications of the Blue Screen
           </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
+              2.1 Professional Video and Photo Background
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
+              The blue screen is a favorite in the entertainment industry,
+              providing a flexible background for video production and
+              photography. Whether you're working on a high-budget project or a
+              personal creative endeavor, the blue screen ensures precision and
+              adaptability for your visuals.
             </p>
           </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
-            </p>
-          </div>
-          {/* Section 3 */}
-          <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
-          </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
+              2.2 Testing Visual Effects and Lighting
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
-            </p>
-          </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
-            </p>
-          </div>
-          {/* Section 4 */}
-          <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
-          </h2>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
-            </h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
-            </p>
-          </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
+              The blue screen is a valuable tool for experimenting with lighting
+              setups and testing visual effects. Its color consistency and
+              non-reflective surface make it a reliable option for fine-tuning
+              your creative workflows. Discover the power of the blue screen
+              with{" "}
+              <Link to={"https://blackscreen.info/"} className="font-bold">
+                blackscreen.info
+              </Link>{" "}
+              and unlock a world of possibilities for your creative and
+              professional projects. Whether you're crafting cinematic
+              masterpieces or improving your digital environment, the blue
+              screen is your perfect companion.
             </p>
           </div>
         </div>

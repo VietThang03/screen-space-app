@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const TermAndConditionPage = () => {
   const location = useLocation();
-  const canonicalUrl = `http://localhost:5173${location.pathname}`;
+  const canonicalUrl = `https://blackscreen.info${location.pathname}`;
   return (
     <>
       <Helmet>
@@ -21,102 +21,131 @@ const TermAndConditionPage = () => {
             Term And Condition
           </h1>
           <p className="text-gray-600 text-center leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
-            eros nec lectus scelerisque tempus nec non odio. Mauris eu risus vel
-            lacus tincidunt ultricies.
+            Welcome to{" "}
+            <Link to={"https://blackscreen.info/"} className="font-bold">
+              Blackscreen.info
+            </Link>{" "}
+            . These Terms and Conditions govern your access and use of our
+            services. By using the website, you agree to the terms outlined
+            below. Please read them carefully.
           </p>
         </div>
 
         {/* Main Content */}
         <div className="max-w-3xl bg-white rounded-lg shadow-lg p-6 mt-8">
           {/* Section 1 */}
-          <h2 className="text-xl font-semibold mb-4">
-            The Versatility of the Black Screen
-          </h2>
+          <h2 className="text-xl font-semibold mb-4">1. Acceptance of Terms</h2>
           <div className="mb-6">
-            <h3 className="text-lg font-medium">
-              1.1 Darken Without Powering Down
-            </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              tincidunt, magna ac interdum lacinia, odio justo pharetra elit,
-              vitae pulvinar risus lorem eu nisi.
-            </p>
-          </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">
-              1.2 Power Saving and Environmental Impact
-            </h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Vestibulum sit amet metus eget risus malesuada dapibus a eget
-              odio. Integer fermentum, neque vitae venenatis cursus, eros justo
-              pretium ex, eget luctus ligula lorem sit amet ex.
+              By accessing or using our website, you confirm that you agree to
+              abide by these Terms and Conditions. If you do not agree, please
+              discontinue use of the site immediately.
             </p>
           </div>
 
-          {/* Section 2 */}
+          <h2 className="text-xl font-semibold mb-4">2. Use of Services</h2>
+          <div className="mb-6">
+            <p className="text-gray-700 leading-relaxed mt-2">
+              You must use the website only for lawful purposes and in
+              compliance with applicable laws and regulations. Prohibited
+              activities include, but are not limited to, unauthorized access,
+              distribution of harmful software, and misuse of the website or its
+              content.
+            </p>
+          </div>
+
+          <h2 className="text-xl font-semibold mb-4">3. User Accounts</h2>
+          <div className="mb-6">
+            <p className="text-gray-700 leading-relaxed mt-2">
+              You may be required to create an account to access certain
+              features. You are responsible for safeguarding your account
+              credentials and for all activities carried out under your account.
+              We reserve the right to suspend or terminate accounts that violate
+              these Terms.
+            </p>
+          </div>
+
           <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
+            4. Intellectual Property
           </h2>
           <div className="mb-6">
-            <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
-            </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
+              All content, including text, images, graphics, logos, and designs,
+              is the intellectual property of{" "}
+              <Link to={"https://blackscreen.info/"} className="font-bold">
+                Blackscreen.info
+              </Link>{" "}
+              and protected by copyright laws. You are prohibited from
+              reproducing, distributing, or using our content without prior
+              written consent.
             </p>
           </div>
+
+          <h2 className="text-xl font-semibold mb-4">5. Privacy</h2>
           <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
+              Your use of the website is subject to our Privacy Policy, which
+              explains how we collect, use, and protect your personal
+              information.
             </p>
           </div>
-          {/* Section 3 */}
+
           <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
+            6. Limitation of Liability
           </h2>
           <div className="mb-6">
-            <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
-            </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
+              We are not liable for any damages, losses, or disruptions caused
+              by the use or inability to use the website. This includes
+              technical issues, unauthorized access, or any other circumstance
+              beyond our control.
             </p>
           </div>
+
+          <h2 className="text-xl font-semibold mb-4">7. Third-Party Links</h2>
           <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
+              Our website may contain links to external websites. We are not
+              responsible for the content, policies, or practices of third-party
+              sites and encourage you to review their terms before engaging.
             </p>
           </div>
-          {/* Section 4 */}
+
           <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
+            8. Modifications to Terms
           </h2>
           <div className="mb-6">
-            <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
-            </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
+              We reserve the right to update these Terms and Conditions at any
+              time. Continued use of the website after changes implies
+              acceptance of the updated terms.
             </p>
           </div>
+
+          <h2 className="text-xl font-semibold mb-4">9. Governing Law</h2>
           <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
+              These Terms and Conditions are governed by the laws, and any
+              disputes shall be resolved in accordance with these laws.
             </p>
           </div>
+
+          <h2 className="text-xl font-semibold mb-4">
+            10. Contact Information
+          </h2>
+          <div className="mb-6">
+            <p className="text-gray-700 leading-relaxed mt-2">
+              For questions or concerns about these Terms and Conditions, please
+              contact us at: Email: screenspaceinco@gmal.com Phone: 0938 137 131
+            </p>
+          </div>
+          <h2 className="text-xl mb-4">
+            Thank you for visiting{" "}
+            <Link to={"https://blackscreen.info/"} className="font-bold">
+              Blackscreen.info
+            </Link>{" "}
+            !
+          </h2>
         </div>
       </div>
     </>

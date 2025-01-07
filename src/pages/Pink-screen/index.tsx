@@ -3,15 +3,19 @@ import { colors } from "../../utils/ArrayColor";
 import ColorBox from "../../components/ColorBox";
 import ScreenDisplay from "../../components/ScreenDisplay";
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const PinkScreenPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const canonicalUrl = `http://localhost:5173${location.pathname}`;
-  
+  const canonicalUrl = `https://blackscreen.info${location.pathname}`;
+
   const [activeColor, setActiveColor] = useState(colors[7]); // Trạng thái màu hiện tại
-  const handleColorChange = (color: { name: string; color: string; path?: string }) => {
+  const handleColorChange = (color: {
+    name: string;
+    color: string;
+    path?: string;
+  }) => {
     setActiveColor(color);
     navigate(color.path!);
   };
@@ -42,12 +46,19 @@ const PinkScreenPage = () => {
         {/* Header */}
         <div className="max-w-3xl">
           <h1 className="text-2xl font-bold text-center mb-6">
-            Welcome to Pink screen
+            Creative Magic with Pink Screen
           </h1>
           <p className="text-gray-600 text-center leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
-            eros nec lectus scelerisque tempus nec non odio. Mauris eu risus vel
-            lacus tincidunt ultricies.
+            Welcome to{" "}
+            <Link to={"https://blackscreen.info/"} className="font-bold">
+              blackscreen.info
+            </Link>{" "}
+            , where the charm and sophistication of pink take center stage.
+            Known for its soft, romantic, and playful qualities, the pink screen
+            is a versatile and creative tool for enhancing visuals, adding
+            personality, and bringing a unique flair to any project. Whether
+            you're designing dreamy aesthetics or exploring bold, trendy themes,
+            the pink screen offers endless possibilities.
           </p>
         </div>
 
@@ -55,90 +66,89 @@ const PinkScreenPage = () => {
         <div className="max-w-3xl bg-white rounded-lg shadow-lg p-6 mt-8">
           {/* Section 1 */}
           <h2 className="text-xl font-semibold mb-4">
-            The Versatility of the Black Screen
+            1. The Unique Appeal of the Pink Screen
           </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              1.1 Darken Without Powering Down
+              1.1 Soft and Versatile Aesthetics
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              tincidunt, magna ac interdum lacinia, odio justo pharetra elit,
-              vitae pulvinar risus lorem eu nisi.
+              A pink screen adds a gentle and captivating visual tone to your
+              projects. Its warm and inviting hue is perfect for creating a
+              variety of moods, from elegance and romance to fun and vibrancy.
+              Whether you're working on photography, videography, or graphic
+              design, the pink screen provides an ideal backdrop for a wide
+              range of styles.
             </p>
           </div>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              1.2 Power Saving and Environmental Impact
+              1.2 A Blend of Sophistication and Playfulness
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Vestibulum sit amet metus eget risus malesuada dapibus a eget
-              odio. Integer fermentum, neque vitae venenatis cursus, eros justo
-              pretium ex, eget luctus ligula lorem sit amet ex.
+              Pink is a color that can seamlessly balance sophistication and
+              playfulness. The pink screen is a perfect choice for projects that
+              require a modern, trendy, or whimsical vibe. It brings an
+              uplifting and dynamic quality to your visuals that resonates with
+              diverse audiences.
             </p>
           </div>
 
           {/* Section 2 */}
           <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
+            2. Practical Applications of the Pink Screen
           </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
+              2.1 Fashion and Beauty Projects
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
+              The pink screen is a go-to choice for fashion and beauty shoots,
+              adding a touch of glamour and style to your visuals. It
+              complements skin tones beautifully and enhances product shots,
+              making it a favorite in the fashion and cosmetic industries.
             </p>
           </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
-            </p>
-          </div>
-          {/* Section 3 */}
-          <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
-          </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
+              2.2 Romantic and Lifestyle Themes
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
+              For romantic or lifestyle projects, the pink screen creates an
+              enchanting atmosphere. Whether it's for wedding visuals,
+              love-themed campaigns, or cozy, personal stories, the pink
+              backdrop enhances the mood and brings a heartfelt touch to your
+              content.
             </p>
           </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
-            </p>
-          </div>
-          {/* Section 4 */}
-          <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
-          </h2>
           <div className="mb-6">
             <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
+              2.3 Creative Branding and Marketing
             </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
+              Pink is increasingly popular in modern branding and marketing
+              campaigns, symbolizing creativity, innovation, and individuality.
+              The pink screen can help you craft bold, eye-catching visuals that
+              leave a lasting impression and connect with your audience
+              emotionally.
             </p>
           </div>
           <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
+            <h2 className="text-lg font-medium">
+              Add a Touch of Pink with{" "}
+              <Link to={"https://blackscreen.info/"} className="font-bold">
+                blackscreen.info
+              </Link>{" "}
+            </h2>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
+              Dive into the world of creativity and charm with{" "}
+              <Link to={"https://blackscreen.info/"} className="font-bold">
+                blackscreen.info
+              </Link>{" "}
+              . Whether you’re designing romantic themes, bold statements, or
+              playful concepts, the pink screen empowers you to bring your
+              vision to life. Let its warmth and versatility inspire your
+              projects and captivate your audience!
             </p>
           </div>
         </div>

@@ -2,73 +2,73 @@
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>http://localhost:5173/</loc>
+        <loc>https://blackscreen.info/</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
 
     <url>
-        <loc>http://localhost:5173/white-screen</loc>
+        <loc>https://blackscreen.info/white-screen</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>http://localhost:5173/blue-screen</loc>
+        <loc>https://blackscreen.info/blue-screen</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>http://localhost:5173/green-screen</loc>
+        <loc>https://blackscreen.info/green-screen</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>http://localhost:5173/red-screen</loc>
+        <loc>https://blackscreen.info/red-screen</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>http://localhost:5173/yellow-screen</loc>
+        <loc>https://blackscreen.info/yellow-screen</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>http://localhost:5173/orange-screen</loc>
+        <loc>https://blackscreen.info/orange-screen</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>http://localhost:5173/pink-screen</loc>
+        <loc>https://blackscreen.info/pink-screen</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>http://localhost:5173/purple-screen</loc>
+        <loc>https://blackscreen.info/purple-screen</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>http://localhost:5173/about</loc>
+        <loc>https://blackscreen.info/about</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>http://localhost:5173/privacy-policy</loc>
+        <loc>https://blackscreen.info/privacy-policy</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>http://localhost:5173/term-and-condition</loc>
+        <loc>https://blackscreen.info/term-and-condition</loc>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>

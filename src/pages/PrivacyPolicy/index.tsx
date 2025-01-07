@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const PrivacyPolicyPage = () => {
   const location = useLocation();
-  const canonicalUrl = `http://localhost:5173${location.pathname}`;
+  const canonicalUrl = `https://blackscreen.info${location.pathname}`;
   return (
     <>
       <Helmet>
@@ -21,102 +21,75 @@ const PrivacyPolicyPage = () => {
             Privacy Policy
           </h1>
           <p className="text-gray-600 text-center leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id
-            eros nec lectus scelerisque tempus nec non odio. Mauris eu risus vel
-            lacus tincidunt ultricies.
+            <Link to={"https://blackscreen.info/"} className="font-bold">
+              Blackscreen.info
+            </Link>{" "}
+            is committed to protecting your privacy and personal information.
+            This privacy policy explains how we collect, use, and safeguard your
+            data when you access or use our services.
           </p>
         </div>
 
         {/* Main Content */}
         <div className="max-w-3xl bg-white rounded-lg shadow-lg p-6 mt-8">
           {/* Section 1 */}
+          <h2 className="text-xl font-semibold mb-4">Information Collected</h2>
+          <div className="mb-6">
+            <p className="text-gray-700 leading-relaxed mt-2">
+              We may collect personal information such as your name, email,
+              phone number, and other details when you register, contact us, or
+              use our services. Additionally, non-personal data such as IP
+              address, browser type, and browsing behavior may also be collected
+              to enhance user experience.
+            </p>
+          </div>
           <h2 className="text-xl font-semibold mb-4">
-            The Versatility of the Black Screen
+            Purpose of Information Use
           </h2>
           <div className="mb-6">
-            <h3 className="text-lg font-medium">
-              1.1 Darken Without Powering Down
-            </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              tincidunt, magna ac interdum lacinia, odio justo pharetra elit,
-              vitae pulvinar risus lorem eu nisi.
+              To provide and improve the quality of our services. To send
+              notifications, newsletters, or relevant updates. To ensure the
+              security and protection of user information.
             </p>
           </div>
+          <h2 className="text-xl font-semibold mb-4">Information Security</h2>
           <div className="mb-6">
-            <h3 className="text-lg font-medium">
-              1.2 Power Saving and Environmental Impact
-            </h3>
             <p className="text-gray-700 leading-relaxed mt-2">
-              Vestibulum sit amet metus eget risus malesuada dapibus a eget
-              odio. Integer fermentum, neque vitae venenatis cursus, eros justo
-              pretium ex, eget luctus ligula lorem sit amet ex.
+              We implement appropriate technical and organizational measures to
+              protect your personal information from unauthorized access, loss,
+              or unwanted disclosure.
             </p>
           </div>
-
-          {/* Section 2 */}
-          <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
+          <h2 className="text-xl font-semibold mb-4">Information Sharing</h2>
+          <div className="mb-6">
+            <p className="text-gray-700 leading-relaxed mt-2">
+              We do not share your personal information with third parties
+              unless required by law or with your explicit consent.
+            </p>
+          </div>
+          <h2 className="text-xl font-semibold mb-4">User Rights</h2>
+          <div className="mb-6">
+            <p className="text-gray-700 leading-relaxed mt-2">
+              You have the right to access, modify, or request the deletion of
+              your personal information at any time by contacting us via our
+              support email.
+            </p>
+          </div>
+          <h2 className="text-xl mb-4">
+            If you have any questions about this privacy policy, please contact
+            us at{" "}
+            <Link to={"https://blackscreen.info/"} className="font-bold">
+              Blackscreen.info
+            </Link>.{" "}
+            <br></br>
+            Note: This privacy policy of{" "}
+            <Link to={"https://blackscreen.info/"} className="font-bold">
+              Blackscreen.info
+            </Link>{" "}
+            may be updated from time to time, please check regularly for the
+            latest version.
           </h2>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
-            </h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
-            </p>
-          </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
-            </p>
-          </div>
-          {/* Section 3 */}
-          <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
-          </h2>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
-            </h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
-            </p>
-          </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
-            </p>
-          </div>
-          {/* Section 4 */}
-          <h2 className="text-xl font-semibold mb-4">
-            Utilizing the Black Screen for Different Purposes
-          </h2>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">
-              2.1 Conceal Your PC's Activity
-            </h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Cras pellentesque, lectus at interdum efficitur, libero purus
-              fringilla nulla, eget egestas magna lorem vitae ligula. Nullam id
-              fringilla lorem.
-            </p>
-          </div>
-          <div className="mb-6">
-            <h3 className="text-lg font-medium">2.2 Enhance Focus</h3>
-            <p className="text-gray-700 leading-relaxed mt-2">
-              Suspendisse a leo at magna tincidunt molestie. Donec euismod leo
-              vitae tellus tempus, a luctus ligula vehicula.
-            </p>
-          </div>
         </div>
       </div>
     </>

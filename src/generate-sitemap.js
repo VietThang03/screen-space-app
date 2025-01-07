@@ -17,7 +17,7 @@ const urls = [
 ];
 
 // Tên miền chính của ứng dụng
-const hostname = 'http://localhost:5173';
+const hostname = 'https://blackscreen.info';
 
 // Hàm tạo nội dung sitemap
 const generateSitemap = (urls, hostname) => {

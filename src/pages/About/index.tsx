@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const AboutPage = () => {
   const location = useLocation();
-  const canonicalUrl = `http://localhost:5173${location.pathname}`;
+  const canonicalUrl = `https://blackscreen.info${location.pathname}`;
   return (
     <>
       <Helmet>
@@ -20,19 +20,36 @@ const AboutPage = () => {
             About us
           </h2>
           <p className="text-gray-600 mb-6">
-            Black Screen is a term used to describe a screen without any
-            display. Check screen errors, color accuracy, and download black
-            screen images at
-            <Link to="/" className="text-blue-500 underline ml-1">
-              Screen Space App
-            </Link>
-            . It's a useful tool to diagnose and resolve screen-related issues
-            conveniently.
+            Welcome to{" "}
+            <Link to={"https://blackscreen.info/"} className="font-bold">
+              blackscreen.info
+            </Link>{" "}
+            — your go-to destination for screen testing and troubleshooting. Our
+            platform provides an easy and effective way to check screen errors,
+            color accuracy, and much more. Whether you're facing issues with
+            black, white, blue, green, red, yellow, orange, pink, or purple
+            screens, we offer downloadable black screen images and tools to help
+            you diagnose and resolve these problems swiftly.
+          </p>
+          <p className="text-gray-600 mb-6">
+            At{" "}
+            <Link to={"https://blackscreen.info/"} className="font-bold">
+              blackscreen.info
+            </Link>{" "}
+            , we understand the frustration that comes with screen malfunctions.
+            Our mission is to make screen diagnostics simpler and more
+            accessible to everyone, offering a reliable and user-friendly
+            experience. With our comprehensive resources and expertise, we are
+            here to assist you in maintaining the highest screen quality for
+            your devices.
           </p>
           <div className="space-y-3 text-gray-600">
             <p>
               <span className="font-semibold">Website:</span>{" "}
-              <Link to="/" className="text-blue-500 underline">
+              <Link
+                to={"https://blackscreen.info/"}
+                className="text-blue-500 underline"
+              >
                 Screen Space App
               </Link>
             </p>
@@ -40,34 +57,27 @@ const AboutPage = () => {
               <span className="font-semibold">Phone:</span> 0938 137 131
             </p>
             <p>
-              <span className="font-semibold">Introduce:</span>{" "}
-              <Link to="/" className="text-blue-500 underline">
-                Screen Space Contact
-              </Link>
+              <span className="font-semibold">Company:</span> ScreenSpace
+              Innovations Technology Co., Ltd
             </p>
             <p>
-              <span className="font-semibold">Company:</span> Công Ty TNHH ABC
-            </p>
-            <p>
-              <span className="font-semibold">Tags:</span> #Screen, #Background,
-              #Blackscreen
-            </p>
-            <p>
-              <span className="font-semibold">Key words:</span> White screen,
-              Black screen, Blue screen, Green screen, Red screen, Yellow
-              screen, Orange screen, Pink screen, Purple screen, Zoom Lighting
+              <span className="font-semibold">Gmail:</span>{" "}
+              <a
+                href="mailto:screenspaceinco@gmal.com"
+                className="text-blue-500 underline"
+              >
+                screenspaceinco@gmal.com
+              </a>
             </p>
             <p>
               <span className="font-semibold">Address:</span> HaNoi, VietNam
             </p>
             <p>
-              <span className="font-semibold">Gmail:</span>{" "}
-              <a
-                href="mailto:Blackscreenspace@gmail.com"
-                className="text-blue-500 underline"
-              >
-                screenspaceapp@gmail.com
-              </a>
+              Discover how we can help improve your screen experience today!
+            </p>
+            <p>
+              <span className="font-semibold">Tags:</span> #ScreenSpaceApp,
+              #Background, #Blackscreen, #Redscreen, #Greenscreen, #Bluescreen
             </p>
           </div>
         </div>

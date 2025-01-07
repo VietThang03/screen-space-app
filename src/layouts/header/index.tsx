@@ -6,7 +6,7 @@ const HeaderApp = () => {
       <header className="w-full bg-white border-b shadow-sm">
         <div className="container mx-auto px-4 flex items-center justify-between py-3">
           {/* Logo */}
-          <Link to="/" className="text-lg font-semibold text-gray-800">
+          <Link to="https://blackscreen.info/" className="text-lg font-semibold text-gray-800">
             Screen Space App
           </Link>
 

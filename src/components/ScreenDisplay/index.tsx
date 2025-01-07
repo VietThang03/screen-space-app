@@ -75,7 +75,8 @@ const ScreenDisplay = ({ activeColor }: Props) => {
       {/* Ô màu (Screen Box) */}
       <div
         ref={screenRef}
-        className={`relative w-full max-w-2xl h-60 ${activeColor.color} rounded-xl shadow-lg`}
+        className={`relative w-full max-w-2xl h-60 rounded-xl shadow-lg`}
+        style={{backgroundColor: `${activeColor.color}`}}
       >
         {/* Nút Fullscreen ở góc */}
         {!isFullscreen && (
